@@ -5,7 +5,7 @@
 
 HrnrKitOS 是一款面向一线运维工程师的**免费全能运维工具盘**。它集成了主流品牌服务器的维护工具，包括 RAID/HBA 卡管理、网卡固件管理、PXE 网络启动及网络配置等实用功能，致力于显著提升服务器运维效率。
 
-![HrnrKitOS iPXE 主界面](https://github.com/hrnr27/HrnrKitOS/blob/main/IPxe%E4%B8%BB%E9%A1%B5.png) *(图片链接已更新为指向 main 分支)*
+![HrnrKitOS iPXE 主界面](https://github.com/hrnr27/HrnrKitOS/blob/main/HrnrKitOSpxe%E7%BB%B4%E6%8A%A4%E7%B3%BB%E7%BB%9F.png)
 
 ## v3.1.0 主要更新
 
