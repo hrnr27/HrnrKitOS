@@ -1,0 +1,85 @@
+HrnrKitOS 服务器运维工具盘
+版本 3.1.0 发布说明
+
+产品概述
+HrnrKitOS 是一款面向一线运维工程师的免费全能运维工具盘，集成了主流品牌服务器的维护工具，包括 RAID/HBA 卡、网卡固件管理、PXE 网络启动及网络配置等实用功能，致力于提升运维效率。
+
+版本 3.1.0 主要更新
+新增 PXE 远程维护系统：支持网络启动，无需每台服务器插拔 U 盘
+
+硬件信息采集功能：可批量收集服务器硬件配置并导出 CSV 文件
+
+BMC/iLO 密码重置工具：支持远程/本地恢复（默认密码：Aa?123456）
+
+Supermicro BIOS 激活码计算工具：直接在超微主板运行即可生成
+
+新增工具：MegaCli64、storcli64（工具总数达 32 个）
+
+修复 Mellanox 网卡工具 mst 加载问题（由用户 @幸福人生 反馈）
+
+优化系统性能与数据迁移工具
+
+调整：移除旧版 PXE 服务工具（需单独下载）
+
+技术参数
+镜像文件：HrnrKit-System-3.1.0-x86_64.iso（237MB）
+
+SHA-256 校验值：
+fd641b02fc2e76c7d3287bda5898fd65a294af6792e1e0e55ec3651f6faab8de
+
+启动支持：Legacy BIOS / UEFI 双模式
+
+自动挂载：工具盘载体 U 盘挂载至 /mnt
+
+系统密码：000000
+
+PXE 远程维护功能
+无需物理介质：通过 PXE 网络启动工具盘
+
+批量硬件采集：支持远程收集服务器硬件信息
+
+远程 SSH 管理：PXE 服务端可直接连接客户端 SSH
+
+支持的操作系统安装（离线可用）：
+
+Debian：10.13 / 11.11 / 12.7
+
+Ubuntu：20.04-24.04（桌面版/服务器版）
+
+Deepin：20.9 / 23
+
+RHEL 系：CentOS/Rocky Linux/RHEL 7-9
+
+Fedora：39/40
+
+openEuler
+
+内置硬件工具列表
+涵盖主流厂商的维护工具，包括但不限于：
+
+存储管理：storcli64、perccli64、smartctl、sas3flash
+
+网络配置：Mellanox (mlxconfig)、Broadcom (bnxtnvm)
+
+带外管理：ipmitool、HPE (hponcfg)、Supermicro (afulnx)
+
+诊断工具：dmidecode、turbostat
+
+完整工具列表：
+ssacli, mlxconfig, nvme, flint, sas3ircu, arcconf, Yafuflash, bootutil64e 等 32 种工具。
+
+使用说明
+工具入口：所有功能集成至 /toolkit/HrkitStresk，运行 HrkitStresk 即可调用。
+
+U 盘可移除：系统启动后，可拔出 U 盘而不影响工具运行。
+
+PXE 配置：需提前设置网络参数再启用服务。
+
+问题反馈与下载
+如有建议或问题，请联系：
+邮箱：hrnr27@outlook.com
+（注：作者每 1-3 周查看一次邮件，回复可能延迟但不会遗漏）
+
+下载地址：
+百度网盘：https://pan.baidu.com/s/1KbVnL3QcYzq6I7MMeqwNjw
+提取码：3bqf
