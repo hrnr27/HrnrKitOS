@@ -68,7 +68,7 @@ HrnrKitOS 是一款面向一线运维工程师的**免费全能运维工具盘**
     *   *(请注意：作者通常每 1-3 周查看一次邮件，回复可能略有延迟，但所有邮件都会被处理)*
 *   **下载地址：**
     *   百度网盘： [https://pan.baidu.com/s/1KbVnL3QcYzq6I7MMeqwNjw](https://pan.baidu.com/s/1KbVnL3QcYzq6I7MMeqwNjw) 提取码：`3bqf`
-    *   *(建议：如果可能，可在 GitHub Release 页面直接提供镜像下载链接，或提供其他备用网盘链接)*
+    *   github: https://github.com/hrnr27/HrnrKitOS/tags
 
 ---
 
