@@ -1,88 +1,75 @@
-HrnrKitOS 服务器运维工具盘
+# HrnrKitOS 服务器/运维工具盘 v3.1.0 发布说明
 ====
-#版本 3.1.0 发布说明
 
-##一、产品概述
------
+## 产品概述
 
-HrnrKitOS 是一款面向一线运维工程师的免费全能运维工具盘，集成了主流品牌服务器的维护工具，包括 RAID/HBA 卡、网卡固件管理、PXE 网络启动及网络配置等实用功能，致力于提升运维效率。
-![image](https://github.com/hrnr27/HrnrKitOS/blob/0e5bec1f4219a562dc1f187657100b674d7e31e4/IPxe%E4%B8%BB%E9%A1%B5.png)
-版本 3.1.0 主要更新
-新增 PXE 远程维护系统：支持网络启动，无需每台服务器插拔 U 盘
+HrnrKitOS 是一款面向一线运维工程师的**免费全能运维工具盘**。它集成了主流品牌服务器的维护工具，包括 RAID/HBA 卡管理、网卡固件管理、PXE 网络启动及网络配置等实用功能，致力于显著提升服务器运维效率。
 
-硬件信息采集功能：可批量收集服务器硬件配置并导出 CSV 文件
+![HrnrKitOS iPXE 主界面](https://github.com/hrnr27/HrnrKitOS/blob/main/IPxe%E4%B8%BB%E9%A1%B5.png) *(图片链接已更新为指向 main 分支)*
 
-BMC/iLO 密码重置工具：支持远程/本地恢复（默认密码：Aa?123456）
+## v3.1.0 主要更新
 
-Supermicro BIOS 激活码计算工具：直接在超微主板运行即可生成
+*   **新增 PXE 远程维护系统：** 支持服务器通过网络启动工具盘，无需再为每台服务器插拔 U 盘。
+*   **新增硬件信息采集功能：** 支持批量收集服务器硬件配置信息，并可导出为 CSV 文件。
+*   **新增 BMC/iLO 密码重置工具：** 支持远程或本地恢复默认密码（默认密码：`Aa?123456`）。
+*   **新增 Supermicro BIOS 激活码计算工具：** 直接在超微主板上运行即可生成 BIOS 激活码。
+*   **新增工具：** MegaCli64, storcli64（至此，工具总数已达 **32 个**）。
+*   **修复：** Mellanox 网卡工具 `mst` 加载问题（感谢用户 @幸福人生 反馈）。
+*   **优化：** 系统性能与数据迁移工具。
+*   **调整：** 移除了旧版 PXE 服务工具（如有需要请单独下载旧版）。
 
-新增工具：MegaCli64、storcli64（工具总数达 32 个）
+## 技术参数
 
-修复 Mellanox 网卡工具 mst 加载问题（由用户 @幸福人生 反馈）
+*   **镜像文件：** `HrnrKit-System-3.1.0-x86_64.iso` (237MB)
+*   **SHA-256 校验值：**
+    ```
+    fd641b02fc2e76c7d3287bda5898fd65a294af6792e1e0e55ec3651f6faab8de
+    ```
+*   **启动支持：** Legacy BIOS / UEFI 双模式
+*   **自动挂载：** 工具盘载体 U 盘将自动挂载至 `/mnt`
+*   **系统登录密码：** `000000` *(请注意安全)*
 
-优化系统性能与数据迁移工具
+## PXE 远程维护功能详解 (v3.1.0 核心特性)
 
-调整：移除旧版 PXE 服务工具（需单独下载）
+*   **无物理介质：** 服务器通过 PXE 网络启动加载 HrnrKitOS 工具盘。
+*   **批量硬件采集：** 支持远程收集多台服务器的硬件配置信息。
+*   **远程 SSH 管理：** PXE 服务端可直接 SSH 连接到启动后的客户端服务器进行操作。
+*   **支持离线安装的操作系统：**
+    *   Debian: 10.13 / 11.11 / 12.7
+    *   Ubuntu: 20.04 - 24.04 (桌面版/服务器版)
+    *   Deepin: 20.9 / 23
+    *   RHEL 系: CentOS / Rocky Linux / RHEL 7 - 9
+    *   Fedora: 39 / 40
+    *   openEuler
 
-技术参数
-镜像文件：HrnrKit-System-3.1.0-x86_64.iso（237MB）
+## 内置硬件工具列表 (精选)
 
-SHA-256 校验值：
-fd641b02fc2e76c7d3287bda5898fd65a294af6792e1e0e55ec3651f6faab8de
+涵盖主流服务器厂商的关键维护工具：
 
-启动支持：Legacy BIOS / UEFI 双模式
+*   **存储管理：** storcli64, perccli64, MegaCli64, smartctl, sas3flash, sas2flash, sas3ircu, arcconf
+*   **网络配置：** Mellanox (mlxconfig, mstflint/flint, mlxfwmanager), Broadcom (bnxtnvm), Intel (bootutil64e, Yafuflash)
+*   **带外管理 (BMC/iLO/iDRAC)：** ipmitool, HPE (hponcfg, ssacli), Supermicro (afulnx, smcipmitool), Dell (racadm)
+*   **诊断与信息：** dmidecode, turbostat, lshw, nvme-cli
+*   **BIOS/固件：** fwupd, afu (AMI), afudos (AMI), afuefi (AMI)
+*   **其他实用工具：** memtester, stress-ng, gdisk, partclone, ddrescue
 
-自动挂载：工具盘载体 U 盘挂载至 /mnt
+*(工具总数：32 个)*
 
-系统密码：000000
+## 使用说明
 
-PXE 远程维护功能
-无需物理介质：通过 PXE 网络启动工具盘
+1.  **工具入口：** 所有功能集成于 `/toolkit/HrkitStresk` 目录。启动系统后，运行 `HrkitStresk` 脚本即可调用工具菜单界面。
+2.  **U 盘可移除：** 系统完全启动至内存后，即可拔出 U 盘，工具运行不受影响。
+3.  **PXE 配置：** 使用 PXE 功能前，需在服务端正确设置网络参数（IP、DHCP范围等），然后启动 PXE 服务。
 
-批量硬件采集：支持远程收集服务器硬件信息
+## 问题反馈与下载
 
-远程 SSH 管理：PXE 服务端可直接连接客户端 SSH
+*   **反馈与建议：**
+    *   邮箱：hrnr27@outlook.com
+    *   *(请注意：作者通常每 1-3 周查看一次邮件，回复可能略有延迟，但所有邮件都会被处理)*
+*   **下载地址：**
+    *   百度网盘： [https://pan.baidu.com/s/1KbVnL3QcYzq6I7MMeqwNjw](https://pan.baidu.com/s/1KbVnL3QcYzq6I7MMeqwNjw) 提取码：`3bqf`
+    *   *(建议：如果可能，可在 GitHub Release 页面直接提供镜像下载链接，或提供其他备用网盘链接)*
 
-支持的操作系统安装（离线可用）：
+---
 
-Debian：10.13 / 11.11 / 12.7
-
-Ubuntu：20.04-24.04（桌面版/服务器版）
-
-Deepin：20.9 / 23
-
-RHEL 系：CentOS/Rocky Linux/RHEL 7-9
-
-Fedora：39/40
-
-openEuler
-
-内置硬件工具列表
-涵盖主流厂商的维护工具，包括但不限于：
-
-存储管理：storcli64、perccli64、smartctl、sas3flash
-
-网络配置：Mellanox (mlxconfig)、Broadcom (bnxtnvm)
-
-带外管理：ipmitool、HPE (hponcfg)、Supermicro (afulnx)
-
-诊断工具：dmidecode、turbostat
-
-完整工具列表：
-ssacli, mlxconfig, nvme, flint, sas3ircu, arcconf, Yafuflash, bootutil64e 等 32 种工具。
-
-使用说明
-工具入口：所有功能集成至 /toolkit/HrkitStresk，运行 HrkitStresk 即可调用。
-
-U 盘可移除：系统启动后，可拔出 U 盘而不影响工具运行。
-
-PXE 配置：需提前设置网络参数再启用服务。
-
-问题反馈与下载
-如有建议或问题，请联系：
-邮箱：hrnr27@outlook.com
-（注：作者每 1-3 周查看一次邮件，回复可能延迟但不会遗漏）
-
-下载地址：
-百度网盘：https://pan.baidu.com/s/1KbVnL3QcYzq6I7MMeqwNjw
-提取码：3bqf
+**HrnrKitOS - 让服务器运维更简单高效！**
