@@ -69,7 +69,7 @@
 
 ## 功能详解
 <details>
-<summary><b>1. 集中化 Web 管理界面</b></summary>
+<b>1. 集中化 Web 管理界面</b>
 
 ![webui-dashboard](docs/Client.png)
 
