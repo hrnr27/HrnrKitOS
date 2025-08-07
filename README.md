@@ -54,7 +54,7 @@
 ![hrnrkit-hmoe](docs/home.png)
 ### 1) 笔记本中部署（推荐）
 
-1. 在笔记本/虚拟机中启动 `HrnrKit-System-4.0.0-x86_64.iso`  
+1. 在笔记本/虚拟机中启动 `HrnrKit-System-3.3.0-x86_64.iso`  
    - 网卡1：NAT（上网）  
    - 网卡2：桥接（PXE 网络）
 2. 浏览器访问 `http://<服务器IP>:8080` 即可进入 Web UI
