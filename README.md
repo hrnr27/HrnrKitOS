@@ -77,17 +77,14 @@
 - 批量重启、关机、信息采集  
 - 内嵌 Web SSH 直连客户端  
 
-
-<details>
-<summary><b>2. 远程运维操作能力</b></summary>
+<b>2. 远程运维操作能力</b>
 
 - 一键硬件资产盘点（CSV 导出）  
 - BMC 密码批量重置（支持 iLO / iDRAC / IPMI）  
 - 远程电源 & 带外控制（PXE / BIOS / 重启 / 关机）  
-</details>
 
-<details>
-<summary><b>3. 深度硬件诊断与健康管理</b></summary>
+
+<b>3. 深度硬件诊断与健康管理</b>
 
 ![hardware-test](docs/nvidia_test_done.png)
 
@@ -95,16 +92,14 @@
 - 健康分析：SMART / RAID / NIC / BMC  
 - 一键日志采集（RAID / GPU / NIC / BMC）+ 关键字搜索  
 - 生成标准 RMA 报告  
-</details>
 
-<details>
-<summary><b>4. 固件升级与维护</b></summary>
+<b>4. 固件升级与维护</b>
 
 ![firmware-upgrade](docs/raidupdate.png)
 
 - LSI / Broadcom 存储控制器固件在线升级  
 - AMI BIOS 批量刷写（afu / afudos / afuefi）  
-</details>
+
 
 ---
 
