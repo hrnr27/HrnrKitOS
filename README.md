@@ -68,7 +68,7 @@
 ---
 
 ## 功能详解
-<details>
+
 <b>1. 集中化 Web 管理界面</b>
 
 ![webui-dashboard](docs/Client.png)
@@ -76,7 +76,7 @@
 - 实时监控客户端 IP / MAC / 在线状态  
 - 批量重启、关机、信息采集  
 - 内嵌 Web SSH 直连客户端  
-</details>
+
 
 <details>
 <summary><b>2. 远程运维操作能力</b></summary>
