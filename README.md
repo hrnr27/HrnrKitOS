@@ -3,7 +3,7 @@
   <img src="docs/logo.png" alt="HrnrKitOS Logo" width="180"/>
 </p>
 
-<h1 align="center">HrnrKitOS v4.0.0</h1>
+<h1 align="center">HrnrKitOS v3.3.0</h1>
 
 <p align="center">
   <strong>面向一线运维工程师的免费全能 Linux 运维工具盘</strong><br/>
