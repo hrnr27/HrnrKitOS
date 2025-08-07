@@ -44,22 +44,24 @@
 | 🖥️ **Web UI 管理平台** | 首次引入图形化界面，批量管理所有 PXE 客户端 |
 | 🔧 **38+ 运维工具** | 覆盖存储 / 网络 / GPU / BMC / BIOS 等主流品牌 |
 | 📊 **智能诊断** | 一键硬件健康检查、日志采集、压力测试 |
-| 🚀 **GPU 支持** | 新增 NVIDIA GPU 驱动、日志采集与压力测试 |
+| 🚀 **GPU 支持** | 新增 NVIDIA GPU 驱动、日志采集与压力测试(fieldiag) |
 | 🔌 **带外管理** | 远程开机 / 关机 / 重启 / PXE / BIOS |
 | 🔄 **固件升级** | 支持 LSI / Broadcom 存储控制器固件在线升级 |
 
 ---
 
 ## 快速开始
+![hrnrkit-hmoe](docs/home.png)
+### 1) 笔记本中部署（推荐）
 
-### 1) PXE 服务器部署（推荐）
 1. 在笔记本/虚拟机中启动 `HrnrKit-System-4.0.0-x86_64.iso`  
    - 网卡1：NAT（上网）  
    - 网卡2：桥接（PXE 网络）
 2. 浏览器访问 `http://<服务器IP>:8080` 即可进入 Web UI
 3. 将目标服务器设为 PXE 启动，自动加载 HrnrKitOS 并上线
+4. 终端执行 `/toolkit/HrkitStresk` 进入工具菜单
 
-### 2) 单机模式
+### 2) 服务器部署
 - 启动后系统完全加载至内存，U 盘可拔除  
 - 终端执行 `/toolkit/HrkitStresk` 进入工具菜单
 
@@ -69,7 +71,7 @@
 <details>
 <summary><b>1. 集中化 Web 管理界面</b></summary>
 
-![webui-dashboard](https://example.com/hrnrkit-webui-dashboard.png)
+![webui-dashboard](docs/Client.png)
 
 - 实时监控客户端 IP / MAC / 在线状态  
 - 批量重启、关机、信息采集  
@@ -87,7 +89,7 @@
 <details>
 <summary><b>3. 深度硬件诊断与健康管理</b></summary>
 
-![hardware-test](https://example.com/hrnrkit-hardware-test.png)
+![hardware-test](docs/nvidia_test_done.png)
 
 - 压力测试：CPU / 内存 / 硬盘 / 网络 / GPU  
 - 健康分析：SMART / RAID / NIC / BMC  
@@ -98,7 +100,7 @@
 <details>
 <summary><b>4. 固件升级与维护</b></summary>
 
-![firmware-upgrade](https://example.com/hrnrkit-firmware-upgrade.png)
+![firmware-upgrade](docs/raidupdate.png)
 
 - LSI / Broadcom 存储控制器固件在线升级  
 - AMI BIOS 批量刷写（afu / afudos / afuefi）  
@@ -116,7 +118,7 @@
 | **GPU 管理** | `nvidia-smi` `fieldiag` |
 | **带外管理** | `ipmitool` `hponcfg` `ssacli` `smcipmitool` `racadm` |
 | **诊断信息** | `dmidecode` `turbostat` `lshw` `nvme-cli` |
-| **压力测试** | `stress-ng` `memtester` `fio` `iperf3` |
+| **压力测试** | `stress-ng` `memtester` `fio` `iperf3` `fieldiag`|
 | **BIOS/固件** | `fwupd` `afu` `afudos` `afuefi` |
 | **其他** | `gdisk` `partclone` `ddrescue` |
 
@@ -126,10 +128,10 @@
 
 | 渠道 | 链接 | 校验 |
 | --- | --- | --- |
-| **GitHub Releases** | [hrnr27/HrnrKitOS/tags](https://github.com/hrnr27/HrnrKitOS/tags) | SHA-256: `待补充` |
-| **百度网盘** | [pan.baidu.com](https://pan.baidu.com/s/1KbVnL3QcYzq6I7MMeqwNjw) 提取码 `3bqf` | 同上 |
+| **GitHub Releases** | [hrnr27/HrnrKitOS/tags](https://github.com/hrnr27/HrnrKitOS/tags) | SHA-256: `824623ee57290167f131d074a0b8737437a266cc8e7c192bc460b047eb20b02e` |
+| **百度网盘** | [pan.baidu.com](https://pan.baidu.com/s/1KbVnL3QcYzq6I7MMeqwNjw) 提取码 `3bqf` | HrnrKit-System-3.3.0-x86_64.iso |
 
-> 校验命令：`sha256sum HrnrKit-System-4.0.0-x86_64.iso`
+> 校验命令：`sha256sum HrnrKit-System-3.3.0-x86_64.iso`
 
 ---
 
@@ -149,12 +151,12 @@ A: 支持 Legacy BIOS 与 UEFI 双模式启动。
 ---
 
 ## 贡献与反馈
-- 📧 邮件：<hrnr27@outlook.com>（1-3 周内回复）  
+- 📧 邮件：<support@hrnrkit.cn>（1-3 周内回复）  
 - 🐛 Issue：[GitHub Issues](https://github.com/hrnr27/HrnrKitOS/issues)  
 - 💡 PR：欢迎提交补丁、文档或新工具集成
 
 ---
 
 <p align="center">
-  <sub>HrnrKitOS v4.0.0 — 让服务器运维更简单高效！</sub>
+  <sub>HrnrKitOS v3.3.0 — 让服务器运维更简单高效！</sub>
 </p>
