@@ -1,6 +1,6 @@
 <!-- GitHub README.md for hrnr27/HrnrKitOS -->
 <p align="center">
-  <img src="docs/logo.png" alt="HrnrKitOS Logo" width="180"/>
+  <img src="docs/hrnrkitos_logo.svg" alt="HrnrKitOS Logo" width="180"/>
 </p>
 
 <h1 align="center">HrnrKitOS v3.3.0</h1>
