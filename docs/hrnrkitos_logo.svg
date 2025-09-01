@@ -1,0 +1,19 @@
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- 渐变定义 -->
+    <defs>
+        <linearGradient id="logoGradientStroke" x1="0" y1="0.5" x2="1" y2="0.5">
+            <stop offset="0%" stop-color="#007BFF"/>
+            <stop offset="100%" stop-color="#17a2b8"/>
+        </linearGradient>
+    </defs>
+
+    <!-- 图标部分，使用描边 -->
+    <g>
+        <path d="M17 25C17 19.4772 21.4772 15 27 15H43C48.5228 15 53 19.4772 53 25C53 30.5228 48.5228 35 43 35H27C21.4772 35 17 30.5228 17 25Z" stroke="url(#logoGradientStroke)" stroke-width="4"/>
+        <rect x="35" y="15" width="10" height="10" rx="2" stroke="#00D4FF" stroke-width="3"/>
+    </g>
+    
+    <!-- 文字部分 -->
+    <text x="65" y="33" font-family="'Montserrat', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="500" fill="#495057">hrnrkit</text>
+    <text x="148" y="33" font-family="'Montserrat', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="700" fill="#0056b3">OS</text>
+</svg>
