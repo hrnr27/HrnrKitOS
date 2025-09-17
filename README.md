@@ -124,7 +124,7 @@
 
 | 渠道 | 链接 | 校验信息 |
 | --- | --- | --- |
-| **GitHub Releases** | [hrnr27/HrnrKitOS/tags](https://github.com/hrnr27/HrnrKitOS/tags) | SHA-256: `(请在此处更新为 v3.3.1 的真实哈希值)` |
+| **GitHub Releases** | [hrnr27/HrnrKitOS/tags](https://github.com/hrnr27/HrnrKitOS/tags) | SHA-256: `1a8bb9177f5af734e23dfcba152a972b5a65474db4e1f7dbe16beec68fd26c20` |
 | **百度网盘** | [pan.baidu.com](https://pan.baidu.com/s/1KbVnL3QcYzq6I7MMeqwNjw) 提取码 `3bqf` | HrnrKit-System-v3.3.1-x86_64.iso |
 
 > **校验命令:** `sha256sum HrnrKit-System-v3.3.1-x86_64.iso`
