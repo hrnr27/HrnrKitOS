@@ -3,7 +3,7 @@
   <img src="docs/hrnrkitos_logo.svg" alt="HrnrKitOS Logo" width="180"/>
 </p>
 
-<h1 align="center">HrnrKitOS PXE Nexus v3.4.0</h1>
+<h1 align="center">HrnrKitOS PXE Nexus v1.2.0</h1>
 
 <p align="center">
   <strong>面向一线运维工程师的企业级裸金属自动化运维平台</strong><br/>
