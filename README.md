@@ -138,7 +138,7 @@ sudo ./install
 
 ## 💬 社区与支持
 
-- **官方 QQ**: `12345678` ([点击唤起](http://wpa.qq.com/msgrd?v=3&uin=12345678&site=qq&menu=yes))
+- **官方 QQ**: `759419595` ([点击唤起](http://wpa.qq.com/msgrd?v=3&uin=12345678&site=qq&menu=yes))
 - **微信公众号**: `Linux客栈` (获取技术干货与更新推送)
 - **Bug 反馈**: [GitHub Issues](https://github.com/hrnr27/HrnrKitOS/issues)
 - **邮件支持**: <support@hrnrkit.cn>
