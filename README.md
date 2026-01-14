@@ -1,9 +1,9 @@
-<!-- GitHub README.md for hrnr27/HrnrKitOS -->
+<!-- GitHub README.md for hrnr27/hrnrOS -->
 <p align="center">
-  <img src="docs/hrnrkitos_logo.svg" alt="HrnrKitOS Logo" width="200"/>
+  <img src="docs/hrnrOS_logo.svg" alt="hrnrOS Logo" width="200"/>
 </p>
 
-<h1 align="center">HrnrKitOS Nexus v1.2.1</h1>
+<h1 align="center">hrnrOSv1.2.1</h1>
 
 <p align="center">
   <strong>新一代数据中心裸金属自动化运维平台</strong><br/>
@@ -11,11 +11,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/hrnr27/HrnrKitOS/releases">
-    <img src="https://img.shields.io/github/v/release/hrnr27/HrnrKitOS?style=flat-square&label=Latest%20Release&color=238636"/>
+  <a href="https://github.com/hrnr27/hrnrOS/releases">
+    <img src="https://img.shields.io/github/v/release/hrnr27/hrnrOS?style=flat-square&label=Latest%20Release&color=238636"/>
   </a>
-  <a href="https://github.com/hrnr27/HrnrKitOS/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/hrnr27/HrnrKitOS?style=flat-square&label=License&color=0969da"/>
+  <a href="https://github.com/hrnr27/hrnrOS/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/hrnr27/hrnrOS?style=flat-square&label=License&color=0969da"/>
   </a>
   <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Windows-lightgrey?style=flat-square&logo=linux"/>
   <img src="https://img.shields.io/badge/Agentless-Ready-orange?style=flat-square"/>
@@ -40,9 +40,9 @@
 
 ## 📖 项目简介
 
-**HrnrKitOS** 是一套专为大规模数据中心设计的全生命周期运维平台。它无需依赖复杂的带外网络，通过 **PXE 自动化技术** + **Agentless (无代理) 模式**，实现了从**设备自动发现、系统无人值守安装、全栈硬件监控**到**故障自愈**的完整闭环。
+**hrnrOS** 是一套专为大规模数据中心设计的全生命周期运维平台。它无需依赖复杂的带外网络，通过 **PXE 自动化技术** + **Agentless (无代理) 模式**，实现了从**设备自动发现、系统无人值守安装、全栈硬件监控**到**故障自愈**的完整闭环。
 
-无论是数百台服务器的新局点交付，还是日常的硬件故障排查，HrnrKitOS 都能让繁杂的运维工作变得像驾驶自动挡汽车一样简单。
+无论是数百台服务器的新局点交付，还是日常的硬件故障排查，hrnrOS 都能让繁杂的运维工作变得像驾驶自动挡汽车一样简单。
 
 ---
 
@@ -62,7 +62,7 @@
 
 ## ✅ 支持列表
 
-HrnrKitOS 内置了丰富的自动化安装模板，覆盖主流及信创操作系统：
+hrnrOS 内置了丰富的自动化安装模板，覆盖主流及信创操作系统：
 
 | 家族 | 支持版本 |
 | :--- | :--- |
@@ -76,13 +76,13 @@ HrnrKitOS 内置了丰富的自动化安装模板，覆盖主流及信创操作�
 
 ## 🚀 快速开始
 
-HrnrKitOS 支持部署在 **Rocky Linux 8+ / Ubuntu 20.04+** 等主流 Linux 发行版上。
+hrnrOS 支持部署在 **Rocky Linux 8+ / Ubuntu 20.04+** 等主流 Linux 发行版上。
 
 ### 1. 获取安装包
 ```bash
-wget https://github.com/hrnr27/HrnrKitOS/releases/download/v1.2.1/hrnrkitos-nexus-v1.2.1-full.tar.gz
-tar -zxvf hrnrkitos-nexus-v1.2.1-full.tar.gz
-cd hrnrkitos-nexus-v1.2.1
+wget https://github.com/hrnr27/hrnrOS/releases/download/v1.2.1/hrnrOS-nexus-v1.2.1-full.tar.gz
+tar -zxvf hrnrOS-nexus-v1.2.1-full.tar.gz
+cd hrnrOS-nexus-v1.2.1
 ```
 
 ### 2. 一键安装
@@ -131,8 +131,8 @@ sudo ./install
 
 | 版本类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- |
-| **📦 Full (全量包)** | 包含完整依赖与基础镜像，适用于**全新离线安装**。 | [GitHub Release](https://github.com/hrnr27/HrnrKitOS/releases) |
-| **⚡ Update (更新包)** | 仅包含核心程序与 Web 资源，适用于 v1.x **平滑升级**。 | [GitHub Release](https://github.com/hrnr27/HrnrKitOS/releases) |
+| **📦 Full (全量包)** | 包含完整依赖与基础镜像，适用于**全新离线安装**。 | [GitHub Release](https://github.com/hrnr27/hrnrOS/releases) |
+| **⚡ Update (更新包)** | 仅包含核心程序与 Web 资源，适用于 v1.x **平滑升级**。 | [GitHub Release](https://github.com/hrnr27/hrnrOS/releases) |
 
 ---
 
@@ -140,7 +140,7 @@ sudo ./install
 
 - **官方 QQ**: `759419595` ([点击唤起](http://wpa.qq.com/msgrd?v=3&uin=12345678&site=qq&menu=yes))
 - **微信公众号**: `Linux客栈` (获取技术干货与更新推送)
-- **Bug 反馈**: [GitHub Issues](https://github.com/hrnr27/HrnrKitOS/issues)
+- **Bug 反馈**: [GitHub Issues](https://github.com/hrnr27/hrnrOS/issues)
 - **邮件支持**: <support@hrnrkit.cn>
 
 ---
