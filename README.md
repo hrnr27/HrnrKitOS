@@ -1,178 +1,150 @@
 <!-- GitHub README.md for hrnr27/HrnrKitOS -->
 <p align="center">
-  <img src="docs/hrnrkitos_logo.svg" alt="HrnrKitOS Logo" width="180"/>
+  <img src="docs/hrnrkitos_logo.svg" alt="HrnrKitOS Logo" width="200"/>
 </p>
 
-<h1 align="center">HrnrKitOS PXE Nexus v1.2.0</h1>
+<h1 align="center">HrnrKitOS Nexus v1.2.1</h1>
 
 <p align="center">
-  <strong>面向一线运维工程师的企业级裸金属自动化运维平台</strong><br/>
-  一键 PXE 启动 · 自动化 OS 安装 · 物理磁盘定位 · 深度硬件诊断 · 跨机房网段启动
+  <strong>新一代数据中心裸金属自动化运维平台</strong><br/>
+  资产全生命周期 · 裸金属自动驾驶 · 全栈硬件感知 · 故障自愈闭环
 </p>
 
 <p align="center">
   <a href="https://github.com/hrnr27/HrnrKitOS/releases">
-    <img src="https://img.shields.io/github/v/release/hrnr27/HrnrKitOS?style=flat-square&label=Release&logo=github"/>
+    <img src="https://img.shields.io/github/v/release/hrnr27/HrnrKitOS?style=flat-square&label=Latest%20Release&color=238636"/>
   </a>
   <a href="https://github.com/hrnr27/HrnrKitOS/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/hrnr27/HrnrKitOS?style=flat-square&label=License"/>
+    <img src="https://img.shields.io/github/license/hrnr27/HrnrKitOS?style=flat-square&label=License&color=0969da"/>
   </a>
-  <img src="https://img.shields.io/badge/Platform-x86__64-lightgrey?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Windows-lightgrey?style=flat-square&logo=linux"/>
+  <img src="https://img.shields.io/badge/Agentless-Ready-orange?style=flat-square"/>
 </p>
 
 ---
 
 <details open>
-<summary>📑 目录</summary>
+<summary><b>📑 目录 (Table of Contents)</b></summary>
 
-- [核心亮点](#-核心亮点)
+- [项目简介](#-项目简介)
+- [核心特性](#-核心特性)
+- [支持列表](#-支持列表)
 - [快速开始](#-快速开始)
-- [功能详解](#-功能详解)
-- [内置工具清单](#-内置工具清单)
-- [下载与校验](#-下载与校验)
-- [常见问题](#-常见问题)
-- [贡献与反馈](#-贡献与反馈)
+- [功能概览](#-功能概览)
+- [下载与更新](#-下载与更新)
+- [社区与支持](#-社区与支持)
 
 </details>
 
 ---
 
-## ✨ 核心亮点
+## 📖 项目简介
 
-| 特性 | 简介 |
-|------|------|
-| **🚀 部署** | <br>**原生Linux系统部署 (新)**：支持直接安装在 **Rocky/AlmaLinux/RHEL 8+、Fedora、Ubuntu/Debian** 等主流系统上，灵活融入现有运维环境。 |
-| 🌐 **多网段并行完整服务** | 接口独立设计，可在同一主机上让多个物理网口/VLAN同时成为全功能PXE服务器，服务栈物理隔离，满足多机房、多VLAN、高规隔离场景的并行交付需求。 |
-| ⚙️ **自动化 OS 安装** | 支持 Kickstart/Preseed，模板化部署 RHEL/Ubuntu/SUSE 等主流系统，集成IPMI自动引导与Web流程驱动。 |
-| 🔬 **深度硬件诊断** | **新增CPU深度诊断与专业烤机功能**，提供处理器全方位健康洞察与极限稳定性测试。 |
-| 💾 **全系存储配置** | **增强RAID卡支持**，现可便捷配置管理 RAID 0, 1, 5, 10, 50, 60 等全系列别。 |
-| 🛠️ **智能带外管理** | **新增恢复出厂设置、修改BMC密码功能**，并与系统安装流程智能关联，实现零接触运维。 |
-| 💡 **物理磁盘定位** | 远程Web点灯，精准定位SAS/SATA/NVMe硬盘，**新增对直通(Pass-Through)硬盘的支持**。 |
-| 📊 **资产信息管理** | **完善硬件信息采集，并支持一键导出为Excel报告**，便于存档与分析。 |
+**HrnrKitOS** 是一套专为大规模数据中心设计的全生命周期运维平台。它无需依赖复杂的带外网络，通过 **PXE 自动化技术** + **Agentless (无代理) 模式**，实现了从**设备自动发现、系统无人值守安装、全栈硬件监控**到**故障自愈**的完整闭环。
+
+无论是数百台服务器的新局点交付，还是日常的硬件故障排查，HrnrKitOS 都能让繁杂的运维工作变得像驾驶自动挡汽车一样简单。
+
+---
+
+## ✨ 核心特性
+
+| 模块 | 亮点功能 |
+| :--- | :--- |
+| **📦 资产 CMDB** | **自动发现/Excel导入**，深度采集 CPU/内存/硬盘/网卡/GPU 形成 BOM 清单，记录全链路操作审计。 |
+| **🚀 PXE 自动化** | 支持 **RHEL/Windows/国产信创** 全系系统。独创 **可视化 RAID/Bond 配置**，Windows 自动分区与驱动注入。 |
+| **🩺 Nexus 监控** | **全栈感知 + 故障自愈**。实时透视 ECC/SMART/GPU 状态；Agent 失联自动触发 SSH/IPMI 重启修复；支持基准变更审计。 |
+| **🛠️ 系统运维** | **浏览器即控制台**。集成 WebSSH (含 SFTP)、**一键唤起本地 RDP**、批量密码初始化与脚本并发执行。 |
+| **💡 现场神器** | **物理磁盘定位 (无 Agent)**。通过 SSH 直接控制背板，点亮 NVMe/RAID/HBA 硬盘定位灯，拒绝拔错盘。 |
+| **🎮 IPMI 管理** | 批量电源控制，提供 **Web 控制台临时凭据** (30分钟轮换)，支持 BMC 密码修复与恢复出厂设置。 |
+| **🌐 网络架构** | **多网段并行服务**。单机同时支撑多个 VLAN/物理网段的 PXE 服务，物理隔离，互不干扰。 |
+
+---
+
+## ✅ 支持列表
+
+HrnrKitOS 内置了丰富的自动化安装模板，覆盖主流及信创操作系统：
+
+| 家族 | 支持版本 |
+| :--- | :--- |
+| **<img src="https://simpleicons.org/icons/redhat.svg" width="12"/> RHEL 系** | RedHat 7/8/9, CentOS 7/8/9, AlmaLinux, Rocky Linux, Oracle Linux |
+| **<img src="https://simpleicons.org/icons/windows.svg" width="12"/> Windows** | Server 2008/2012/2016/2019/2022/2025, Windows 10/11 |
+| **🇨🇳 国产信创** | openEuler (欧拉) 23/24/25, Anolis (龙蜥) 7/8/23, Kylin (麒麟) V10+, UOS |
+| **<img src="https://simpleicons.org/icons/ubuntu.svg" width="12"/> Debian 系** | Ubuntu 20.04/22.04/24.04 LTS, Debian 11/12/13 |
+| **<img src="https://simpleicons.org/icons/suse.svg" width="12"/> 虚拟化** | VMware ESXi 8, Proxmox VE, SUSE SLE 12/15 |
 
 ---
 
 ## 🚀 快速开始
-![hrnrkit-home](docs/home.png)
 
-### 1) 原生Linux系统部署
-您可以将HrnrKitOS服务端直接安装到您现有的Linux服务器环境中。
+HrnrKitOS 支持部署在 **Rocky Linux 8+ / Ubuntu 20.04+** 等主流 Linux 发行版上。
 
-1.  **环境要求**：
-    *   **支持的系统**：Rocky Linux 8+, AlmaLinux 8+, RHEL 8+, Fedora, Ubuntu/Debian等。
-    *   **网络**：建议配置两个网络接口，一个用于管理，一个专用于PXE服务。
-    *   **存储**：需要准备一个独立分区或硬盘（≥100GB）用于存储数据。
+### 1. 获取安装包
+```bash
+wget https://github.com/hrnr27/HrnrKitOS/releases/download/v1.2.1/hrnrkitos-nexus-v1.2.1-full.tar.gz
+tar -zxvf hrnrkitos-nexus-v1.2.1-full.tar.gz
+cd hrnrkitos-nexus-v1.2.1
+```
 
-2.  **安装与启动**：
-    ```bash
-    # 请在此处替换为实际的安装包名和安装命令
-    # 例如：tar -zxvf hrnrkitos-nexus-v3.4.0.tar.gz && cd hrnrkitos-nexus-v3.4.0 && ./install.sh
-    ```
-    安装程序将引导您完成配置并自动设置服务。完成后，通过浏览器访问 `http://<服务器IP>:8080` 即可进入Web管理界面。
----
+### 2. 一键安装
+脚本会自动检测环境、格式化数据盘并配置服务。
+```bash
+sudo ./install
+```
 
-## 🛠️ 功能详解
-
-### 1. 🌐 多网段并行完整服务
-![multi-segment](docs/nc_multi_subnet.png)
-- **接口独立设计**：同一主机上任意物理网口/VLAN均可同时成为「全功能PXE服务器」，各自独享DHCP/TFTP/HTTP/DNS服务栈，零交叉、零中继。
-- **标签驱动配置**：支持 **PXE网络**（完整引导）、**业务网络**（仅分配IP）、**通用网络**（仅本机静态IP）三种模式。
-- **典型场景**：适用于多机房并行装机、异构VLAN批量交付、生产/管理/实验网物理隔离等高规需求。
-
-### 2. ⚙️ 企业级自动化OS安装
-![os-install](docs/ipxe_tutorial_end.png)
-- **模板化部署**：支持主流操作系统的Kickstart, Preseed/Autoinstall模板。
-- **Web全流程**：从ISO上传、模板管理到安装进度监控，全程Web化。
-- **带外集成**：可结合IPMI自动远程开机并引导至PXE安装流程。
-- **交互式磁盘配置**：在安装前，通过Web界面为服务器直观选择安装目标盘。
-
-### 3. 🔬 深度硬件诊断与压测
-![hardware-test](docs/nvidia_test_done.png)
-- **专业压测套件**：提供CPU、内存、硬盘、网络、GPU的专业压力测试。
-- **CPU深度诊断 (新)**：新增处理器深度诊断功能，提供健康状态与性能洞察。
-- **专业CPU烤机 (升级)**：升级极限稳定性测试，检验系统在高负载下的可靠性。
-- **智能健康分析**：深入解读硬盘SMART、RAID卡事件、BMC日志，预警潜在故障。
-- **一站式日志采集**：一键打包所有关键硬件组件的日志，加速故障排查。
-
-### 4. 💾 全系存储配置与管理
-- **增强RAID配置支持 (新)**：全面支持RAID 0, 1, 5, 10, 50, 60等级的便捷配置与管理。
-- **物理磁盘定位**：自动映射Linux块设备到物理插槽，提供统一的“点亮/熄灭”操作，**新增对直通硬盘的点灯支持**。
-- **固件升级**：支持LSI/Broadcom RAID/HBA卡固件在线升级。
-
-### 5. 🛠️ 智能带外(BMC/IPMI)管理
-- **新增功能**：
-    - **恢复出厂设置**：一键复位BMC/iBMC配置。
-    - **修改BMC密码**：直接在平台内安全更新带外管理密码。
-- **核心功能**：远程开/关机、重启、设置引导项，实现零接触运维。
-- **流程关联**：增强与系统安装流程的智能关联。
-
-### 6. 📊 资产管理与报告
-- **完善硬件采集 (新)**：采集更全面、准确的硬件资产信息。
-- **导出Excel报告 (新)**：支持将硬件信息一键导出为Excel文件，便于数据分析与存档。
-- **优化压测报告样式 (新)**：硬件压力测试报告视觉升级，数据呈现更直观。
-
-### 7. 🔌 兼容性增强
-- **支持更多Linux系统部署 (新)**：可原生安装于主流Linux发行版。
-- **优化IPXE兼容性 (新)**：增强对各类网卡的兼容性，提升网络引导成功率。
+### 3. 访问控制台
+安装完成后，通过浏览器访问：`http://<服务器IP>:8080`
+- 默认账号：`admin`
+- 默认密码：`hrnrkit`
 
 ---
 
-## 🧰 内置工具清单
-> 共 38+ 个，按场景分类
+## 🧩 功能概览
 
-| 类别 | 工具 |
-| --- | --- |
-| **存储管理** | `storcli64`, `perccli64`, `MegaCli64`, `smartctl`, `sas3flash`, `sas2flash`, `sas3ircu`, `arcconf` |
-| **网络配置** | `mlxconfig`, `mstflint`, `mlxfwmanager`, `bnxtnvm`, `bootutil64e`, `Yafuflash` |
-| **GPU 管理** | `nvidia-smi`, `fieldiag` |
-| **带外管理** | `ipmitool`, `hponcfg`, `ssacli`, `smcipmitool`, `racadm` |
-| **诊断与压测** | `dmidecode`, `turbostat`, `lshw`, `nvme-cli`, `stress-ng`, `memtester`, `fio`, `iperf3` |
-| **BIOS/固件** | `fwupd`, `afu`, `afudos`, `afuefi` |
-| **其他** | `gdisk`, `partclone`, `ddrescue` |
+### 1. 全栈硬件监控 (Nexus Monitor)
+![monitor](docs/monitor_dashboard_overview.png)
 
----
+具备自我感知能力的监控大屏。不仅展示状态，更支持 **Agent 无感热升级** 与 **智能修复**。
 
-## 📥 下载与校验
+### 2. 自动化 OS 安装 (Visual Config)
+![os-install](docs/pxe_hardware_config_raid.png)
 
-| 渠道 | 链接 | 说明 |
-| --- | --- | --- |
-| **GitHub Releases** | [hrnr27/HrnrKitOS/tags](https://github.com/hrnr27/HrnrKitOS/tags) | 获取最新版本的 **Live ISO** 及 **原生部署安装包**。 |
-| **百度网盘** | [pan.baidu.com](https://pan.baidu.com/s/1KbVnL3QcYzq6I7MMeqwNjw) 提取码 `3bqf` | 备用下载渠道。 |
+告别盲装。在安装前，系统会自动扫描物理磁盘，支持 **可视化配置 RAID 级别** (0/1/5/10) 及网络 Bond 模式。
 
-> **请注意**：从 v3.4.0 开始，我们提供 **Live ISO** 和 **Linux原生安装包** 两种格式，请根据您的部署需求选择下载。
+### 3. 高效系统运维 (System Ops)
+![ops](docs/batch_script_console.png)
 
----
+集成 WebSSH 终端与批量脚本控制台。针对 Windows 服务器，提供 **一键唤起 RDP** 功能，自动填充凭据，点击即连。
 
-## ❓ 常见问题
-<details>
-<summary>Q: 现在支持哪些部署方式？</summary>
-A: 目前支持两种部署方式：1) **传统 Live ISO 模式**，解压即用；2) **原生Linux系统部署**，可直接安装在 Rocky/AlmaLinux/RHEL 8+、Fedora、Ubuntu/Debian 等系统上，更灵活地融入现有环境。
-</details>
+### 4. 物理磁盘定位 (Disk Locator)
+![locator](docs/locator_disk_list.png)
 
-<details>
-<summary>Q: 如何重置 BMC 密码？</summary>
-A: 在 Web UI 选中目标主机 → 更多操作 → BMC 密码重置。该功能已在新版本中增强，支持更多品牌。
-</details>
+专为现场运维设计。无需安装 Agent，直接通过底层指令点亮硬盘 LED 灯，支持 **NVMe、RAID 及 HBA 直通盘**。
 
-<details>
-<summary>Q: 是否支持 UEFI 启动？</summary>
-A: 支持 Legacy BIOS 与 UEFI 双模式启动。
-</details>
+### 5. 一键日志采集
+![logs](docs/log_viewer_search.png)
 
-<details>
-<summary>Q: 如何导出硬件信息报告？</summary>
-A: 在硬件信息采集页面，点击“导出”按钮即可生成 Excel 格式的详细报告。
-</details>
+自动化收集 RAID 卡日志 (MegaCli/StorCli)、GPU 调试信息及系统日志，内置 **在线高亮搜索器**，快速定位故障。
 
 ---
 
-## 🤝 贡献与反馈
-- 📧 **邮件**: <support@hrnrkit.cn>
-- 🐛 **Issue**: [GitHub Issues](https://github.com/hrnr27/HrnrKitOS/issues)
-- 💡 **PR**: 欢迎提交代码补丁、文档改进或新工具集成！
+## 📥 下载与更新
+
+| 版本类型 | 说明 | 下载链接 |
+| :--- | :--- | :--- |
+| **📦 Full (全量包)** | 包含完整依赖与基础镜像，适用于**全新离线安装**。 | [GitHub Release](https://github.com/hrnr27/HrnrKitOS/releases) |
+| **⚡ Update (更新包)** | 仅包含核心程序与 Web 资源，适用于 v1.x **平滑升级**。 | [GitHub Release](https://github.com/hrnr27/HrnrKitOS/releases) |
+
+---
+
+## 💬 社区与支持
+
+- **官方 QQ**: `12345678` ([点击唤起](http://wpa.qq.com/msgrd?v=3&uin=12345678&site=qq&menu=yes))
+- **微信公众号**: `Linux客栈` (获取技术干货与更新推送)
+- **Bug 反馈**: [GitHub Issues](https://github.com/hrnr27/HrnrKitOS/issues)
+- **邮件支持**: <support@hrnrkit.cn>
 
 ---
 
 <p align="center">
-  <sub>HrnrKitOS PXE Nexus — 让裸金属服务器运维更简单、更智能、更高效！</sub>
+  <sub>Made with ❤️ by HrnrKit Team. 赋能数据中心智能运维。</sub>
 </p>
