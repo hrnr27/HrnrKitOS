@@ -101,27 +101,22 @@ sudo ./install
 ## 🧩 功能概览
 
 ### 1. 全栈硬件监控 (Nexus Monitor)
-![monitor](docs/monitor_dashboard_overview.png)
 
 具备自我感知能力的监控大屏。不仅展示状态，更支持 **Agent 无感热升级** 与 **智能修复**。
 
 ### 2. 自动化 OS 安装 (Visual Config)
-![os-install](docs/pxe_hardware_config_raid.png)
 
 告别盲装。在安装前，系统会自动扫描物理磁盘，支持 **可视化配置 RAID 级别** (0/1/5/10) 及网络 Bond 模式。
 
 ### 3. 高效系统运维 (System Ops)
-![ops](docs/batch_script_console.png)
 
 集成 WebSSH 终端与批量脚本控制台。针对 Windows 服务器，提供 **一键唤起 RDP** 功能，自动填充凭据，点击即连。
 
 ### 4. 物理磁盘定位 (Disk Locator)
-![locator](docs/locator_disk_list.png)
 
 专为现场运维设计。无需安装 Agent，直接通过底层指令点亮硬盘 LED 灯，支持 **NVMe、RAID 及 HBA 直通盘**。
 
 ### 5. 一键日志采集
-![logs](docs/log_viewer_search.png)
 
 自动化收集 RAID 卡日志 (MegaCli/StorCli)、GPU 调试信息及系统日志，内置 **在线高亮搜索器**，快速定位故障。
 
