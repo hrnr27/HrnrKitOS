@@ -80,9 +80,9 @@ hrnrOS 支持部署在 **Rocky Linux 8+ / Ubuntu 20.04+** 等主流 Linux 发行
 
 ### 1. 获取安装包
 ```bash
-wget https://github.com/hrnr27/hrnrOS/releases/download/v1.2.1/hrnrOS-nexus-v1.2.1-full.tar.gz
-tar -zxvf hrnrOS-nexus-v1.2.1-full.tar.gz
-cd hrnrOS-nexus-v1.2.1
+wget https://github.com/hrnr27/HrnrKitOS/releases/download/hrnr_install_v1.2.1.tar.gz/hrnr_install_v1.2.1.tar.gz
+tar -zxvf hrnr_install_v1.2.1.tar.gz
+cd hrnr_install_v1.2.1/
 ```
 
 ### 2. 一键安装
