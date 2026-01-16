@@ -3,7 +3,7 @@
   <img src="docs/hrnrOS_logo.svg" alt="hrnrOS Logo" width="200"/>
 </p>
 
-<h1 align="center">hrnrOSv1.2.1</h1>
+<h1 align="center">hrnrOS_v1.2.1</h1>
 
 <p align="center">
   <strong>新一代数据中心裸金属自动化运维平台</strong><br/>
