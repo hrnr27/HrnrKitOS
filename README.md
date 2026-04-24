@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="docs/hrnrOS_logo.svg" alt="hrnrOS Logo" width="200"/>
+  <img src="docs/DeplOS_logo.svg" alt="DeplOS Logo" width="200"/>
 </p>
 
-<h1 align="center">hrnrOS_v1.3.2</h1>
+<h1 align="center">DeplOS_v1.3.2</h1>
 
 <p align="center">
   <strong>新一代数据中心裸金属自动化运维平台</strong><br/>
@@ -10,11 +10,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/hrnr27/hrnrOS/releases">
-    <img src="https://img.shields.io/github/v/release/hrnr27/hrnrOS?style=flat-square&label=Latest%20Release&color=238636"/>
+  <a href="https://github.com/hrnr27/DeplOS/releases">
+    <img src="https://img.shields.io/github/v/release/hrnr27/DeplOS?style=flat-square&label=Latest%20Release&color=238636"/>
   </a>
-  <a href="https://github.com/hrnr27/hrnrOS/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/hrnr27/hrnrOS?style=flat-square&label=License&color=0969da"/>
+  <a href="https://github.com/hrnr27/DeplOS/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/hrnr27/DeplOS?style=flat-square&label=License&color=0969da"/>
   </a>
   <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Windows-lightgrey?style=flat-square&logo=linux"/>
   <img src="https://img.shields.io/badge/Arch-x86__64%20%7C%20ARM64-blueviolet?style=flat-square"/>
@@ -39,7 +39,7 @@
 
 ## 📖 项目简介
 
-**hrnrOS** 是一套专为大规模数据中心设计的全生命周期运维平台。它无需依赖复杂的带外网络，通过 **PXE 自动化技术** ，实现了从设备自动发现、系统无人值守安装、全栈硬件监控到故障自愈的完整闭环。
+**DeplOS** 是一套专为大规模数据中心设计的全生命周期运维平台。它无需依赖复杂的带外网络，通过 **PXE 自动化技术** ，实现了从设备自动发现、系统无人值守安装、全栈硬件监控到故障自愈的完整闭环。
 
 在 v1.3.2 中，我们进一步强化了**硬件底层操控能力（BIOS）**，并显著提升了在大规模交付场景下的系统稳定性与用户交互体验。
 
@@ -53,11 +53,11 @@
 - **新增 BIOS 远程配置**：新增独立 BIOS 配置功能模块，支持通过平台统一管理服务器底层硬件参数。
 - **升级 系统内核**：升级 x86_64 架构内核版本，大幅提升系统在高并发部署场景下的稳定性和新型硬件兼容性。
 - **优化 GPU 驱动适配**：更新 NVIDIA GPU 驱动架构，适配更多新型号显卡，并同步增强了 GPU 诊断测试模块的准确性。
-- **修复 ARM 架构 RAID 配置**：解决了 hrnrOS 在 ARM 架构镜像下 RAID 卡无法识别或配置失败的兼容性问题。
+- **修复 ARM 架构 RAID 配置**：解决了 DeplOS 在 ARM 架构镜像下 RAID 卡无法识别或配置失败的兼容性问题。
 
 ### 🏗️ 交付编排与效率
 - **新增 场景化新手向导**：在资产管理页面引入快速使用向导，引导用户快速完成从“资产入库”到“自动化交付”的流程闭环。
-- **增强 自动化压测流程**：在“新机入库”编排任务中新增**硬盘压测**环节；所有压测模块（CPU/内存/硬盘/GPU）新增“停留在 HrnrOS 选择界面”选项，方便现场人工调试。
+- **增强 自动化压测流程**：在“新机入库”编排任务中新增**硬盘压测**环节；所有压测模块（CPU/内存/硬盘/GPU）新增“停留在 DeplOS 选择界面”选项，方便现场人工调试。
 - **优化 任务调度稳定性**：修复了自动化编排任务因执行时间过长导致异常跳过并误报“安装成功”的逻辑 Bug。
 - **优化 PXE 数据加载**：PXE 安装模块任务创建改为直接拉取数据库实时数据，提升高并发任务下的响应速度。
 
@@ -116,7 +116,7 @@
 
 ## ✅ 支持列表
 
-hrnrOS 支持主流及信创操作系统（x86_64 及 ARM64 架构）：
+DeplOS 支持主流及信创操作系统（x86_64 及 ARM64 架构）：
 
 | 家族 | 支持版本 |
 | :--- | :--- |
@@ -162,7 +162,7 @@ sudo ./install
 针对 HPC 与 AI 算力集群设计。对显卡计算核心及显存颗粒执行高强度验证，支持显存泄漏排查及极限稳定性评估。
 
 ### 5. 高效系统运维 (System Ops) - 升级
-集成 WebSSH 终端与批量脚本控制台。**新增对 ESXi 子机的识别**，支持直接从 hrnrOS 运维中心拉起子机控制窗口。
+集成 WebSSH 终端与批量脚本控制台。**新增对 ESXi 子机的识别**，支持直接从 DeplOS 运维中心拉起子机控制窗口。
 
 ### 6. 物理磁盘定位 (Disk Locator)
 无需安装 Agent，直接通过底层指令点亮 LED 灯，支持 **NVMe、RAID 及 HBA 直通盘**，解决现场运维拔错盘的痛点。
@@ -173,8 +173,8 @@ sudo ./install
 
 | 版本类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- |
-| **📦 Full (全量包)** | 包含完整依赖与基础镜像，适用于**全新离线安装**。 | [GitHub Release](https://github.com/hrnr27/hrnrOS/releases) |
-| **⚡ Update (更新包)** | 仅包含核心程序与 Web 资源，适用于 v1.x **平滑升级**。 | [GitHub Release](https://github.com/hrnr27/hrnrOS/releases) |
+| **📦 Full (全量包)** | 包含完整依赖与基础镜像，适用于**全新离线安装**。 | [GitHub Release](https://github.com/hrnr27/DeplOS/releases) |
+| **⚡ Update (更新包)** | 仅包含核心程序与 Web 资源，适用于 v1.x **平滑升级**。 | [GitHub Release](https://github.com/hrnr27/DeplOS/releases) |
 
 ---
 
