@@ -9,6 +9,20 @@
   自动化交付编排 · 黑灯工厂模式 · 全栈硬件感知 · 离线镜像仓库
 </p>
 
+> <p align="center"><strong>序阵 · Deploy OS</strong> — 让每一次部署，都井然成阵。</p>
+
+<p align="center">
+  <a href="https://github.com/hrnr27/DeplOS/releases">
+    <img src="https://img.shields.io/github/v/release/hrnr27/DeplOS?style=flat-square&label=Latest%20Release&color=238636"/>
+  </a>
+  <a href="https://github.com/hrnr27/DeplOS/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/hrnr27/DeplOS?style=flat-square&label=License&color=0969da"/>
+  </a>
+  <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Windows-lightgrey?style=flat-square&logo=linux"/>
+  <img src="https://img.shields.io/badge/Arch-x86__64%20%7C%20ARM64-blueviolet?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Agentless-Ready-orange?style=flat-square"/>
+</p>
+
 <p align="center">
   <a href="https://github.com/hrnr27/DeplOS/releases">
     <img src="https://img.shields.io/github/v/release/hrnr27/DeplOS?style=flat-square&label=Latest%20Release&color=238636"/>
