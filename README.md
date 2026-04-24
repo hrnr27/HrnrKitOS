@@ -23,17 +23,6 @@
   <img src="https://img.shields.io/badge/Agentless-Ready-orange?style=flat-square"/>
 </p>
 
-<p align="center">
-  <a href="https://github.com/hrnr27/DeplOS/releases">
-    <img src="https://img.shields.io/github/v/release/hrnr27/DeplOS?style=flat-square&label=Latest%20Release&color=238636"/>
-  </a>
-  <a href="https://github.com/hrnr27/DeplOS/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/hrnr27/DeplOS?style=flat-square&label=License&color=0969da"/>
-  </a>
-  <img src="https://img.shields.io/badge/Platform-Linux%20%7C%20Windows-lightgrey?style=flat-square&logo=linux"/>
-  <img src="https://img.shields.io/badge/Arch-x86__64%20%7C%20ARM64-blueviolet?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Agentless-Ready-orange?style=flat-square"/>
-</p>
 
 <details open>
 <summary><b>📑 目录 (Table of Contents)</b></summary>
