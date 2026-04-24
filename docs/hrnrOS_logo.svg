@@ -132,7 +132,7 @@
   </g>
   
   <!-- 中心标识 -->
-  <text x="60" y="65" text-anchor="middle" fill="url(#textGrad)" font-family="Arial, sans-serif" font-size="24" font-weight="bold" filter="url(#textShadow)">DeplOS</text>
+  <text x="60" y="65" text-anchor="middle" fill="url(#textGrad)" font-family="Arial, sans-serif" font-size="24" font-weight="bold" filter="url(#textShadow)">HRNR</text>
   
   <!-- 动态光点效果 - 增强发光 -->
   <g filter="url(#strongGlow)">
