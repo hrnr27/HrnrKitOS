@@ -2,7 +2,7 @@
   <img src="docs/DeplOS_logo.svg" alt="DeplOS Logo" width="200"/>
 </p>
 
-<h1 align="center">DeplOS_v1.3.4</h1>
+<h1 align="center">DeplOS_v1.3.5</h1>
 
 <p align="center">
   <strong>新一代数据中心裸金属自动化运维平台</strong><br/>
