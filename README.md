@@ -202,7 +202,7 @@ sudo ./install
 
 - **官方 QQ**: `759419595`
 - **微信公众号**: `Linux客栈`
-- **邮件支持**: <support@hrnrkit.cn>
+- **邮件支持**: <support@deplos.cn>
 
 <p align="center">
   <sub>Made with ❤️ by DeplOS Team. 赋能数据中心智能运维。</sub>
